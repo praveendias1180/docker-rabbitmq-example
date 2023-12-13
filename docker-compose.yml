@@ -23,6 +23,10 @@ services:
       # HTTP management UI
       - '15672:15672'
 
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+
     # Run this container on a private network for this application.
     # This is necessary for magic Docker DNS to work: other containers
     # also running on this network will see a host name "rabbitmq"
